@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #000000;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.form input, .form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #37b755;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.bill {
+    margin-top: 20px;
+    padding: 15px;
+    background: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.bill p, .bill table {
+    margin-bottom: 10px;
+}
+
+.bill table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bill table, th, td {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}
+
+.total {
+    font-weight: bold;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    width: 48%;
+    display: inline-block;
+    margin: 5px;
+}
