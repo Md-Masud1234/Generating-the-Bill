@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating the Bill Of a Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Generating Bill Of Product</h2>
+        
+        <div class="form">
+            <h3>Buyer Details</h3>
+            <input type="text" id="buyerName" placeholder="Full Name">
+            <input type="text" id="buyerAddress" placeholder="Address">
+            <input type="text" id="buyerContact" placeholder="Contact">
+            <input type="email" id="buyerEmail" placeholder="Email">
+            
+            <h3>Product Details</h3>
+            <table id="productTable">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+            </table>
+            <button onclick="addProduct()">Add Product</button>
+            
+            <h3>Transaction Details</h3>
+            <input type="text" id="transactionId" placeholder="Transaction ID">
+            <input type="date" id="purchaseDate">
+            <input type="text" id="paymentMethod" placeholder="Payment Method">
+            
+            <button onclick="generateBill()">Generate Bill</button>
+        </div>
+        
+        <div class="bill" id="bill" style="display:none;">
+            <h3>Buyer Details</h3>
+            <p><strong>Full Name:</strong> <span id="displayBuyerName"></span></p>
+            <p><strong>Address:</strong> <span id="displayBuyerAddress"></span></p>
+            <p><strong>Contact:</strong> <span id="displayBuyerContact"></span></p>
+            <p><strong>Email:</strong> <span id="displayBuyerEmail"></span></p>
+            
+            <h3>Product Details</h3>
+            <table id="billProductTable">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+            </table>
+            
+            <p class="total">Subtotal: <span id="subtotal"></span></p>
+            <p class="total">Final Total Amount Due: <span id="finalTotal"></span></p>
+            
+            <h3>Transaction Details</h3>
+            <p><strong>Transaction ID:</strong> <span id="displayTransactionId"></span></p>
+            <p><strong>Purchase Date:</strong> <span id="displayPurchaseDate"></span></p>
+            <p><strong>Payment Method:</strong> <span id="displayPaymentMethod"></span></p>
+        </div>
+        
+        <div class="buttons" style="display:none;" id="billButtons">
+            <button onclick="printBill()">Print</button>
+            <button onclick="downloadPDF()">Download as PDF</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</body>
+</html>
